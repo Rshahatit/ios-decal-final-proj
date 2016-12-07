@@ -24,8 +24,11 @@ You are hosting a party and want to have a lit soundtrack/playlist. You and 3 of
 
 Implementation Details:  
   TableViewController : For searching Spotify for songs, artists and albums.
+  
   AudioViewController : For playing the specific song & adding to the global playlist.
+  
   PlaylistTableViewController : For storing all the songs you have added to the playlist.
+  
   AudioFinalViewController : For playing the songs from the global playlist.
 
 
