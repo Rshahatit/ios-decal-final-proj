@@ -14,18 +14,18 @@ Purpose
 LetsDJ allows you to give a select number of people to be the DJ for your awesome party! Let your most musical friends have control and make the party a blast!
 
 Features
-- Give certain friends with Spotify accounts access to this shared playlist
-- Once you have access, you can queue songs to the playlist
-- Members can vote to delete a song off the playlist (if majority of the people with access vote to delete a song, the song will get deleted)
-
+- Give certain friends with Spotify accounts access to this shared playlist.
+- Search songs, artists and albums from spotify to add to the global playlist.
+- Once you have access, you can queue songs to the playlist.
+- Finally, you can play songs from the playlist.
 
 Control Flow
-You are hosting a party and want to have a lit soundtrack/playlist. You realize your music taste kind of sucks, so you give your 3 best friends access to this shared playlist. The main screen will have all the playlists you created. You then click on the playlist you want to use for the party. That will consist of all the songs in order of when they will play. That screen will have a button to add everyone  you want to be able to contribute to this playlist. Then any person with access can click add, to search spotify and queue a song to the playlist. Also, each song in this playlist will have a down arrow key and if a person clicks it, 1 will pop up next to it. If more than half the people its shared with click it, the song will get deleted from the playlist. 
+You are hosting a party and want to have a lit soundtrack/playlist. You and 3 of your friends want to create a shared playlist. The main screen will allow you to search for songs to add to the playlist. You can then sample songs and proceed to add the song to the global playlist you created. After you click on the playlist, you will see all the songs in order of when they will play. That screen will have a button to add everyone you want to be able to contribute to this playlist. Then any person with access can click add, to search spotify and queue a song to the playlist.
 
-Implementation
-Model
-- Login.Swift, Menu.Swift, SongQueue.Swift
-View
-- LoginView.Swift, MenuView.Swift, SongQueueView.Swift
-Controller
-- LoginController.Swift, MenuController.Swift, SongQueueController.Swift
+Implementation Details:  
+  TableViewController : For searching Spotify for songs, artists and albums.
+  AudioViewController : For playing the specific song & adding to the global playlist.
+  PlaylistTableViewController : For storing all the songs you have added to the playlist.
+  AudioFinalViewController : For playing the songs from the global playlist.
+
+
