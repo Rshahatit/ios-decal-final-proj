@@ -20,6 +20,7 @@ Features
 - Finally, you can play songs from the playlist.
 
 Control Flow
+
 You are hosting a party and want to have a lit soundtrack/playlist. You and 3 of your friends want to create a shared playlist. The main screen will allow you to search for songs to add to the playlist. You can then sample songs and proceed to add the song to the global playlist you created. After you click on the playlist, you will see all the songs in order of when they will play. That screen will have a button to add everyone you want to be able to contribute to this playlist. Then any person with access can click add, to search spotify and queue a song to the playlist.
 
 Implementation Details:  
