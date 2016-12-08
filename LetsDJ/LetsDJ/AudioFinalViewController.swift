@@ -21,9 +21,9 @@ class AudioFinalViewController: UIViewController {
     var mainPreviewURLArr = [String]()
     
     
+    @IBOutlet var startStop: UIImageView!
     @IBOutlet var image: UIImageView!
     @IBOutlet var songTitle: UILabel!
-    @IBOutlet var playPause: UIButton!
     @IBOutlet var back: UIButton!
     @IBOutlet var backgroundPic: UIImageView!
     
@@ -33,7 +33,10 @@ class AudioFinalViewController: UIViewController {
         backgroundPic.image = imagePic
         image.image = imagePic
         downloadFileFromURL(url: URL(string: mainPreviewURL)!)
-        playPause.setTitle("Pause", for: .normal)
+        startStop.image = UIImage(named: "Play_Pause_2")
+        startStop.isUserInteractionEnabled = true
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(AudioFinalViewController.imageTapped))
+        startStop.addGestureRecognizer(tapRecognizer)
 
         // Do any additional setup after loading the view.
     }
@@ -73,16 +76,6 @@ class AudioFinalViewController: UIViewController {
         mainPreviewURLArr = preview
     }
     
-    @IBAction func pausePlay(_ sender: AnyObject) {
-        if player.isPlaying {
-            player.pause()
-            playPause.setTitle("Play", for: .normal)
-            
-        } else {
-            player.play()
-            playPause.setTitle("Pause", for: .normal)
-        }
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playlist" {
@@ -109,6 +102,18 @@ class AudioFinalViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func imageTapped() {
+        if player.isPlaying {
+            player.pause()
+            startStop.image = UIImage(named:"Play_Pause_1")
+            
+        } else {
+            player.play()
+            startStop.image = UIImage(named:"Play_Pause_2")
+        }
+
     }
     
 

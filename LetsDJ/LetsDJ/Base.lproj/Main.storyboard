@@ -8,11 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LetsDJ-->
+        <!--Title-->
         <scene sceneID="Pev-Td-ejN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yWb-6q-ta0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="LetsDJ" id="Qek-ng-3rl" customClass="TableViewController" customModule="LetsDJ" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Qek-ng-3rl" customClass="TableViewController" customModule="LetsDJ" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" id="hVK-Gd-hla">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,14 +43,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-lF-8g6">
-                                            <frame key="frameInset" minX="117" minY="55" width="142" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="View Current Playlist"/>
-                                            <connections>
-                                                <segue destination="rHV-Oh-Aod" kind="show" identifier="goingToThePlaylist" id="xhW-Za-NJl"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="UPj-9c-dWe" secondAttribute="bottom" constant="18" id="67e-0D-Pm2"/>
@@ -77,8 +68,9 @@
                         <outlet property="searchBar" destination="lv9-ro-zON" id="Ja8-qj-aSe"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWb-6q-ta0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="149"/>
+            <point key="canvasLocation" x="1021.6" y="148.87556221889056"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="e0s-eI-5dC">
@@ -119,34 +111,30 @@
                                                 <segue destination="Qek-ng-3rl" kind="show" id="nPq-uo-ezn"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m1-gF-JEO">
-                                            <frame key="frameInset" minX="164" minY="515" width="46" height="41"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="pausePlay:" destination="fk5-a3-0oB" eventType="touchUpInside" id="JGD-Kp-s5J"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-tb-DpB">
-                                            <frame key="frameInset" minX="137" minY="587" width="101" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-tb-DpB">
+                                            <frame key="frameInset" minX="137" minY="575" width="101" height="30"/>
                                             <state key="normal" title="Add To Playlist"/>
                                             <connections>
                                                 <segue destination="rHV-Oh-Aod" kind="show" identifier="playlist" id="kj6-Tu-QoA"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-4z-Vnq">
+                                            <frame key="frameInset" minX="175" minY="515" width="25" height="26"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="YYC-4Y-lsT" firstAttribute="top" secondItem="BTJ-7L-9pK" secondAttribute="top" constant="144" id="66t-GM-uPM"/>
                                         <constraint firstItem="qcb-Mh-Ds7" firstAttribute="leading" secondItem="BTJ-7L-9pK" secondAttribute="leading" constant="67" id="9xm-sb-UUr"/>
-                                        <constraint firstAttribute="trailing" secondItem="5m1-gF-JEO" secondAttribute="trailing" constant="165" id="LBN-mM-Lqw"/>
+                                        <constraint firstItem="bx0-4z-Vnq" firstAttribute="top" secondItem="qcb-Mh-Ds7" secondAttribute="bottom" constant="23" id="QiB-7s-J58"/>
                                         <constraint firstItem="YYC-4Y-lsT" firstAttribute="leading" secondItem="BTJ-7L-9pK" secondAttribute="leading" constant="67" id="Qts-8m-FhP"/>
-                                        <constraint firstItem="2lb-tb-DpB" firstAttribute="top" secondItem="5m1-gF-JEO" secondAttribute="bottom" constant="31" id="RbO-6N-D1r"/>
-                                        <constraint firstItem="5m1-gF-JEO" firstAttribute="leading" secondItem="BTJ-7L-9pK" secondAttribute="leading" constant="164" id="VCK-zt-rpJ"/>
+                                        <constraint firstItem="bx0-4z-Vnq" firstAttribute="leading" secondItem="BTJ-7L-9pK" secondAttribute="leading" constant="175" id="S8N-mG-L9v"/>
                                         <constraint firstItem="2lb-tb-DpB" firstAttribute="leading" secondItem="BTJ-7L-9pK" secondAttribute="leading" constant="137" id="WiQ-ye-D74"/>
                                         <constraint firstAttribute="trailing" secondItem="qcb-Mh-Ds7" secondAttribute="trailing" constant="68" id="X7g-hH-L3g"/>
                                         <constraint firstItem="qcb-Mh-Ds7" firstAttribute="top" secondItem="YYC-4Y-lsT" secondAttribute="bottom" constant="27" id="YcO-ew-XyK"/>
-                                        <constraint firstItem="5m1-gF-JEO" firstAttribute="top" secondItem="qcb-Mh-Ds7" secondAttribute="bottom" constant="23" id="bTD-E7-dCb"/>
                                         <constraint firstAttribute="trailing" secondItem="2lb-tb-DpB" secondAttribute="trailing" constant="137" id="e7U-gb-3oH"/>
                                         <constraint firstAttribute="trailing" secondItem="YYC-4Y-lsT" secondAttribute="trailing" constant="68" id="emf-Cg-iXT"/>
+                                        <constraint firstItem="2lb-tb-DpB" firstAttribute="top" secondItem="bx0-4z-Vnq" secondAttribute="bottom" constant="34" id="fI8-3M-vBu"/>
+                                        <constraint firstAttribute="trailing" secondItem="bx0-4z-Vnq" secondAttribute="trailing" constant="175" id="hL9-Lm-7lc"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
@@ -167,13 +155,13 @@
                     <connections>
                         <outlet property="background" destination="IRT-CG-W7c" id="FWJ-Dy-QbJ"/>
                         <outlet property="mainImageView" destination="YYC-4Y-lsT" id="eG2-tS-g5q"/>
-                        <outlet property="playpausebtn" destination="5m1-gF-JEO" id="J0q-6Q-lKh"/>
+                        <outlet property="playPause" destination="bx0-4z-Vnq" id="PzS-U7-4Lc"/>
                         <outlet property="songTitle" destination="qcb-Mh-Ds7" id="gib-bp-eqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cc-zB-QpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1882" y="125"/>
+            <point key="canvasLocation" x="1880.8" y="124.58770614692655"/>
         </scene>
         <!--Playlist Table View Controller-->
         <scene sceneID="08p-lc-A43">
@@ -186,7 +174,7 @@
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sUl-82-lgv">
                             <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Back"/>
+                            <state key="normal" title="Back To Search"/>
                             <connections>
                                 <segue destination="Qek-ng-3rl" kind="show" identifier="backToSearch" id="zHj-Rl-KtO"/>
                             </connections>
@@ -293,18 +281,17 @@
                                                 <segue destination="rHV-Oh-Aod" kind="show" identifier="goingToPlaylist" id="2Kv-sS-SgO"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GJ-yF-Bbv">
-                                            <frame key="frameInset" minX="164" minY="525" width="46" height="41"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="pausePlay:" destination="ZxC-ME-HvU" eventType="touchUpInside" id="yBI-L0-P3V"/>
-                                            </connections>
-                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-v4-Lhu">
+                                            <frame key="frameInset" minX="175" minY="532" width="25" height="24"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="a8Z-v4-Lhu" firstAttribute="leading" secondItem="LMp-Lg-C2D" secondAttribute="leading" constant="175" id="014-g9-zE8"/>
                                         <constraint firstAttribute="trailing" secondItem="b9D-nn-vTN" secondAttribute="trailing" constant="68" id="0Mb-j3-A02"/>
                                         <constraint firstItem="b9D-nn-vTN" firstAttribute="leading" secondItem="LMp-Lg-C2D" secondAttribute="leading" constant="67" id="STi-Rh-Xqx"/>
+                                        <constraint firstAttribute="trailing" secondItem="a8Z-v4-Lhu" secondAttribute="trailing" constant="175" id="ejb-Fz-rPf"/>
+                                        <constraint firstItem="a8Z-v4-Lhu" firstAttribute="top" secondItem="b9D-nn-vTN" secondAttribute="bottom" constant="39" id="gLz-hz-BwK"/>
+                                        <constraint firstAttribute="bottom" secondItem="a8Z-v4-Lhu" secondAttribute="bottom" constant="111" id="hXH-FK-o3l"/>
                                         <constraint firstItem="Phg-ak-kCN" firstAttribute="leading" secondItem="LMp-Lg-C2D" secondAttribute="leading" constant="67" id="nxS-cd-R3i"/>
                                         <constraint firstItem="Phg-ak-kCN" firstAttribute="top" secondItem="LMp-Lg-C2D" secondAttribute="top" constant="144" id="wZV-Yt-0EK"/>
                                         <constraint firstAttribute="trailing" secondItem="Phg-ak-kCN" secondAttribute="trailing" constant="68" id="wnT-6K-KG6"/>
@@ -330,17 +317,17 @@
                         <outlet property="back" destination="JNm-VE-LsL" id="C7l-g5-2AM"/>
                         <outlet property="backgroundPic" destination="aKO-is-Rz9" id="JYJ-4A-7YN"/>
                         <outlet property="image" destination="Phg-ak-kCN" id="OsM-jM-fcu"/>
-                        <outlet property="playPause" destination="0GJ-yF-Bbv" id="ukh-Y8-Jv1"/>
                         <outlet property="songTitle" destination="b9D-nn-vTN" id="3CM-2K-1bp"/>
+                        <outlet property="startStop" destination="a8Z-v4-Lhu" id="qbo-yo-myl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txw-JZ-bvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3622" y="125"/>
+            <point key="canvasLocation" x="3621.5999999999999" y="124.58770614692655"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zHj-Rl-KtO"/>
-        <segue reference="2Kv-sS-SgO"/>
+        <segue reference="kj6-Tu-QoA"/>
+        <segue reference="nPq-uo-ezn"/>
     </inferredMetricsTieBreakers>
 </document>

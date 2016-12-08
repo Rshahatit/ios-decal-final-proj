@@ -15,17 +15,17 @@ class AudioViewController : UIViewController {
     var image = UIImage()
     var mainSongTitle = String()
     var mainPreviewURL = String()
-    
+    var playOrPause: Int = 2
     var listNames = [String]()
     var listImages = [UIImage]()
     var mainPreviewURLArr = [String]()
     
     
-    @IBOutlet var playpausebtn: UIButton!
     @IBOutlet var background: UIImageView!
     
     @IBOutlet var mainImageView: UIImageView!
     
+    @IBOutlet var playPause: UIImageView!
     
     @IBOutlet var songTitle: UILabel!
     
@@ -34,7 +34,13 @@ class AudioViewController : UIViewController {
         background.image = image
         mainImageView.image = image
         downloadFileFromURL(url: URL(string: mainPreviewURL)!)
-        playpausebtn.setTitle("Pause", for: .normal)
+        playPause.image = UIImage(named: "Play_Pause_\(playOrPause)")
+        playPause.isUserInteractionEnabled = true
+        //now you need a tap gesture recognizer
+        //note that target and action point to what happens when the action is recognized.
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(AudioViewController.imageTapped))
+        //Add the recognizer to your view.
+        playPause.addGestureRecognizer(tapRecognizer)
         
     }
     
@@ -73,17 +79,6 @@ class AudioViewController : UIViewController {
         mainPreviewURLArr = preview
     }
     
-    @IBAction func pausePlay(_ sender: AnyObject) {
-        if player.isPlaying {
-            player.pause()
-            playpausebtn.setTitle("Play", for: .normal)
-            
-        } else {
-            player.play()
-            playpausebtn.setTitle("Pause", for: .normal)
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playlist" {
             listNames.append(mainSongTitle)
@@ -96,6 +91,19 @@ class AudioViewController : UIViewController {
             vc.configImageArray(images: listImages)
             vc.configPreviewArray(preview: mainPreviewURLArr)
         }
+    }
+    
+    func imageTapped() {
+        if player.isPlaying {
+            player.pause()
+            playPause.image = UIImage(named: "Play_Pause_1")
+            
+            
+        } else {
+            player.play()
+            playPause.image = UIImage(named: "Play_Pause_2")
+        }
+        
     }
     
 }

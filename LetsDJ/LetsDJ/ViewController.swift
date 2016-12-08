@@ -25,6 +25,7 @@ struct post {
 
 class TableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
+
     
     var posts = [post]()
 
@@ -142,8 +143,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
             vc.configPreviewArray(preview: previewURLArr)
 
         }
-      
-        
         
     }
     
