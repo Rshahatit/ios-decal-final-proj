@@ -116,7 +116,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
         let mainLabel = cell?.viewWithTag(1) as! UILabel
         
         mainLabel.text = posts[indexPath.row].name
-        
+                
         return cell!
     }
     

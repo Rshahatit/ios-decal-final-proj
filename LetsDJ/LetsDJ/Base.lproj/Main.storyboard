@@ -8,25 +8,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--LetsDJ-->
         <scene sceneID="Pev-Td-ejN">
             <objects>
-                <tableViewController id="Qek-ng-3rl" customClass="TableViewController" customModule="LetsDJ" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="LetsDJ" id="Qek-ng-3rl" customClass="TableViewController" customModule="LetsDJ" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" id="hVK-Gd-hla">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="lv9-ro-zON">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Click to search for an artist, album, or song" id="lv9-ro-zON">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="Qek-ng-3rl" id="kg2-1g-zP4"/>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="Vib-pe-WK7">
-                                <rect key="frame" x="0.0" y="72" width="375" height="92"/>
+                            <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="Vib-pe-WK7">
+                                <rect key="frame" x="0.0" y="136" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vib-pe-WK7" id="mHA-Sf-Cpb">
                                     <frame key="frameInset" width="375" height="91"/>
@@ -40,7 +41,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1B9-OL-y6i">
                                             <frame key="frameInset" minX="90" minY="26" width="277" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -53,6 +54,8 @@
                                         <constraint firstAttribute="leadingMargin" secondItem="UPj-9c-dWe" secondAttribute="leading" id="qKe-tD-fNM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.23653927364864866" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="fk5-a3-0oB" kind="presentation" identifier="audio" id="S6O-41-oIQ"/>
                                 </connections>
@@ -63,7 +66,7 @@
                             <outlet property="delegate" destination="Qek-ng-3rl" id="KAq-t2-G42"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="159-wW-fME"/>
+                    <navigationItem key="navigationItem" title="LetsDJ" id="159-wW-fME"/>
                     <connections>
                         <outlet property="searchBar" destination="lv9-ro-zON" id="Ja8-qj-aSe"/>
                     </connections>
@@ -100,20 +103,24 @@
                                                 <constraint firstAttribute="height" constant="81" id="kEA-fW-y68"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3s-kz-2qb">
                                             <frame key="frameInset" minX="35" minY="38" width="34" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Back"/>
+                                            <state key="normal" title="Back">
+                                                <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <segue destination="Qek-ng-3rl" kind="show" id="nPq-uo-ezn"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-tb-DpB">
                                             <frame key="frameInset" minX="137" minY="575" width="101" height="30"/>
-                                            <state key="normal" title="Add To Playlist"/>
+                                            <state key="normal" title="Add To Playlist">
+                                                <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <segue destination="rHV-Oh-Aod" kind="show" identifier="playlist" id="kj6-Tu-QoA"/>
                                             </connections>
@@ -174,7 +181,10 @@
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sUl-82-lgv">
                             <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Back To Search"/>
+                            <state key="normal" title="Back To Search">
+                                <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <segue destination="Qek-ng-3rl" kind="show" identifier="backToSearch" id="zHj-Rl-KtO"/>
                             </connections>
@@ -195,7 +205,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVQ-4H-p62">
                                             <frame key="frameInset" minX="90" minY="26" width="277" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -208,6 +218,7 @@
                                         <constraint firstItem="bVQ-4H-p62" firstAttribute="centerY" secondItem="nRC-Rk-KPp" secondAttribute="centerY" id="zfC-6d-d1g"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="ZxC-ME-HvU" kind="show" identifier="audioFinal" id="cMz-Hg-pag"/>
                                 </connections>
@@ -228,9 +239,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5al-PO-VTQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DqN-mg-L75">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DqN-mg-L75">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="0.40200063344594594" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -270,13 +282,15 @@
                                                 <constraint firstAttribute="height" constant="81" id="R7U-U5-3OX"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-VE-LsL">
                                             <frame key="frameInset" minX="35" minY="38" width="34" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Back"/>
+                                            <state key="normal" title="Back">
+                                                <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <segue destination="rHV-Oh-Aod" kind="show" identifier="goingToPlaylist" id="2Kv-sS-SgO"/>
                                             </connections>
@@ -327,7 +341,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kj6-Tu-QoA"/>
-        <segue reference="nPq-uo-ezn"/>
+        <segue reference="2Kv-sS-SgO"/>
+        <segue reference="csz-Hx-KPR"/>
     </inferredMetricsTieBreakers>
 </document>
